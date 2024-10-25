@@ -62,7 +62,7 @@ export default function TeamPage() {
 
       </form>
       <ul className="mt-4 space-y-2">
-        {team.map((index,team) => (
+        {team.map((team,index) => (
             <li key={index} onClick={()=>{router.push(`/team/${team}`)}} className=" text-zinc-800 p-4 flex justify-between bg-blue-100 rounded-lg hover:bg-blue-200 transition">
               <Link className='my-2'  href={`./team/${team}`}>
             <h2 className="text-xl font-semibold">{team}</h2>

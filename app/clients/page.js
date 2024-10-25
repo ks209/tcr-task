@@ -61,8 +61,8 @@ export default function ClientsPage() {
 
       </form>
       <ul className="mt-4 space-y-2 text-black">
-        {allClients.map((key,client) => (
-          <li key={key} onClick={()=>(router.push(`/clients/${client}`))} className=" flex justify-between  p-4 bg-green-100 rounded-lg hover:bg-green-200 transition">
+        {allClients.map((client,index) => (
+          <li key={index} onClick={()=>(router.push(`/clients/${client}`))} className=" flex justify-between  p-4 bg-green-100 rounded-lg hover:bg-green-200 transition">
             <Link className='my-2'  href={`./team/${client}`}>
             <h2 className="text-xl font-semibold">{client}</h2>
             </Link>
