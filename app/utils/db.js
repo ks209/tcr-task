@@ -2,7 +2,7 @@ import { JSONFilePreset } from 'lowdb/node'
 
 
 
-const db = await JSONFilePreset('/tmp/db.json', {
+const db = await JSONFilePreset('db.json', {
   "tasks": [
     {
       "id": "1728893479789",
