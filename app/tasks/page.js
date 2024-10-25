@@ -12,8 +12,8 @@ export default function TasksPage() {
   const fetchTask = async()=>{
     try {
         const res = await axios.get("../api/tasks");
-
-        setTasks(res.data);
+        console.log(res)
+        setTasks(res.data.tasks);
     } catch (error) {
         console.error(error)
     }
