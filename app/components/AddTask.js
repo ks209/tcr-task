@@ -74,8 +74,8 @@ export default function AddTask(props) {
             className="w-full p-2 border  px-4 py-3  border-gray-300 rounded-lg shadow-md focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition-all duration-300 ease-in-out placeholder-gray-900 bg-slate-50/[0.3] text-white"
           >
             <option className="text-black" value="">Select an team</option>
-            {members.map((team) => (
-              <option className="text-black" value={team}>{team}</option>
+            {members.map((index,team) => (
+              <option key={index} className="text-black" value={team}>{team}</option>
             ))}
           </select>
         </div>
@@ -89,8 +89,8 @@ export default function AddTask(props) {
             className="w-full p-2 border  px-4 py-3  border-gray-300 rounded-lg shadow-md focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition-all duration-300 ease-in-out placeholder-gray-900 bg-slate-50/[0.3] text-white"
           >
             <option className="text-black" value="">Select a client</option>
-            {clients.map((client) => (
-              <option className="text-black" value={client}>{client}</option>
+            {clients.map((index,client) => (
+              <option key={index} className="text-black" value={client}>{client}</option>
             ))}
           </select>
         </div>

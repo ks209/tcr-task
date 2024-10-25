@@ -5,7 +5,7 @@ import axios from 'axios';
 import Nav from '../components/Nav';
 import { useRouter } from 'next/navigation';
 
-export default function teamPage() {
+export default function TeamPage() {
 
   const router = useRouter();
   
@@ -62,8 +62,8 @@ export default function teamPage() {
 
       </form>
       <ul className="mt-4 space-y-2">
-        {team.map((team) => (
-            <li onClick={()=>{router.push(`/team/${team}`)}} className=" text-zinc-800 p-4 flex justify-between bg-blue-100 rounded-lg hover:bg-blue-200 transition">
+        {team.map((index,team) => (
+            <li key={index} onClick={()=>{router.push(`/team/${team}`)}} className=" text-zinc-800 p-4 flex justify-between bg-blue-100 rounded-lg hover:bg-blue-200 transition">
               <Link className='my-2'  href={`./team/${team}`}>
             <h2 className="text-xl font-semibold">{team}</h2>
             </Link>
