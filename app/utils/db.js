@@ -2,7 +2,7 @@ import { JSONFilePreset } from 'lowdb/node'
 
 
 
-const db = await JSONFilePreset('db.json', {
+const db = await JSONFilePreset('/tmp/db.json', {
   "tasks": [
     {
       "id": "1728893479789",
@@ -44,7 +44,7 @@ const db = await JSONFilePreset('db.json', {
 
 async function initDB() {
   await db.read();
-
+  db.write();
 }
 
 await initDB(); 
